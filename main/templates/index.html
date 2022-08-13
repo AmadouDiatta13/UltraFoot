@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>UltraFoot</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{{ 'https://fonts.googleapis.com/css?family=Akronim&amp;display=swap' }}">
+    <link rel="stylesheet" href="{{ 'https://fonts.googleapis.com/css?family=Berkshire+Swash&amp;display=swap' }}">
+    <link rel="stylesheet" href="{{ 'https://fonts.googleapis.com/css?family=Ceviche+One&amp;display=swap' }}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/line-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/fontawesome5-overrides.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/best-carousel-slide.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Bold-BS4-Footer-Big-Logo.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Carousel_Image_Slider-1.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Carousel_Image_Slider.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Customizable-Background--Overlay.css' %}">
+    <link rel="stylesheet" href="{{ 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css' }}">
+    <link rel="stylesheet" href="{{ 'https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css' }}">
+    <link rel="stylesheet" href="{% static 'assets/css/Lightbox-Gallery.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Navigation-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Single-Page-Contact-Us-Form.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Team-Boxed.css' %}">
+</head>
+
+<body>
+    <header style="position: fixed;top:0; width: 100%;z-index: 100;">
+        <!-- Start: Navigation Clean -->
+        <nav class="navbar navbar-light navbar-expand-lg navigation-clean" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;max-height: 60px;padding-bottom: 20px;padding-top: 20px;background: linear-gradient(0deg, #ba1021 78%, white 100%);border-bottom: 2px solid var(--bs-dark);">
+            <div class="container"><i class="la la-soccer-ball-o bounce animated infinite" style="color: #ffffff;"></i><a class="navbar-brand" href="#" style="transform: perspective(0px);font-family: Akronim,'Brush Script MT', cursive, serif;font-weight: bold;text-align: left;color: #ffffff;">UltraFoot</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="padding-top: 2px;padding-bottom: 2px;padding-left: 8px;padding-right: 8px;color: #ffffff;"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon" style="height: 20px;width: 20px;color: #ffffff;"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#presentation-menu" style="font-family: 'Ceviche One','Brush Script MT', cursive, serif;border-style: solid;border-radius: 25px;padding-right: 10px;padding-left: 10px;margin: 3px;text-align: center;min-width: 100px;color: #ffffff;margin-top: 5px;background: #ba1021;">Presentation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#photos-menu" style="font-family: 'Ceviche One','Brush Script MT', cursive, serif;border-style: solid;border-radius: 25px;padding-right: 10px;padding-left: 10px;margin: 3px;text-align: center;min-width: 100px;color: #ffffff;background: #ba1021;">Photos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team-boxed-menu" style="font-family: 'Ceviche One','Brush Script MT', cursive, serif;border-style: solid;border-radius: 25px;padding-right: 10px;padding-left: 10px;margin: 3px;text-align: center;min-width: 100px;color: #ffffff;background: #ba1021;">Entraineurs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact-us" style="font-family: 'Ceviche One','Brush Script MT', cursive, serif;border-style: solid;border-radius: 25px;padding-right: 10px;padding-left: 10px;margin: 3px;text-align: center;min-width: 100px;color: #ffffff;background: #ba1021;">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav><!-- End: Navigation Clean -->
+    </header>
+    <main>
+        <section>
+            <!-- Start: Customizable Background & Overlay -->
+            <div data-bss-hover-animate="shake" style="height: 500px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;background: url('{% static "assets/img/Ultra.svg"%}') center / cover no-repeat;"></div><!-- End: Customizable Background & Overlay -->
+        </section>
+        <section style="margin-bottom: 80px;">
+            <h1 id="presentation-menu" style="text-align: center;margin-top: 20px;font-family: 'Ceviche One','Brush Script MT', cursive, serif;border-top-style: solid;border-bottom-style: solid;background: linear-gradient(-17deg, #ba1021 0%, white 51%);">Présentation</h1>
+            {% for presentation in presentations %}
+                <p class="text-center" style="padding-right: 20px;padding-left: 20px;font-family: 'Berkshire Swash', serif;font-size: 18px;margin-top: 30px;margin-bottom: 25px;">{{presentation.paragraphe}}<br></p>
+            {% endfor %}
+            {% if objectifs %}
+                <ul class="text-start" style="margin-left: 50px;">
+                    {% for objectif in objectifs %}
+                        <li style="font-family: 'Berkshire Swash', serif;font-weight: bold;">{{objectif.liste}}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </section>
+        <h1 id="photos-menu" style="text-align: center;margin-top: 20px;font-family: 'Ceviche One','Brush Script MT', cursive, serif;border-top-style: solid;border-bottom-style: solid;background: linear-gradient(-17deg, #ba1021, white 51%);">Photos</h1><!-- Start: Lightbox Gallery -->
+        <section class="photo-gallery">
+            <div class="container">
+                <!-- Start: Photos -->
+                <div class="row photos" data-bss-baguettebox="">
+                    {% for photo in photos %}
+                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href={{ photo.image.url }}><img class="img-fluid" src={{ photo.image.url }}></a></div>
+                    {% endfor %}
+            </div>
+        </section><!-- End: Lightbox Gallery -->
+        <h1 id="team-boxed-menu" style="text-align: center;margin-top: 50px;font-family: 'Ceviche One','Brush Script MT', cursive, serif;border-top-style: solid;border-bottom-style: solid;background: linear-gradient(-17deg, #ba1021, white 51%);margin-bottom: 50px;" >Entraineurs</h1><!-- Start: Team Boxed -->
+        <section class="team-boxed">
+            <div class="container" >
+                <!-- Start: People -->
+                <div class="row people">
+                    {% for coach in coaches %}
+                        <div class="col-md-6 col-lg-4 item" style="margin: auto";>
+                            <div class="box"><img class="rounded-circle" src='{{ coach.image.url  }}'>
+                                <h3 class="name">{{ coach.name }}</h3>
+                                <p class="description">{{ coach.presentation }}</p>
+                                <div class="social"><a href="{{ coach.facebook }}"><i class="fa fa-facebook-official"></i></a><a href="{{ coach.twitter }}"><i class="fa fa-twitter"></i></a><a href="{{ coach.instagram}}"><i class="fa fa-instagram"></i></a></div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div><!-- End: People -->
+            </div>
+        </section><!-- End: Team Boxed -->
+        <h1 id="contact-us" style="text-align: center;margin-top: 20px;margin-bottom: 20px;font-family: 'Ceviche One','Brush Script MT', cursive, serif;border-top-style: solid;border-bottom-style: solid;background: linear-gradient(-17deg, #ba1021, white 51%);">Contactez nous</h1>
+    </main><!-- Start: Single Page Contact Us Form -->
+    <div>
+        <div class="container" >
+            <div class="row">
+                <div class="col-md-6" style="padding-left: 20px;padding-right: 20px;background-color: rgb(241,247,252);margin: auto;">
+                    <legend><i class="la la-soccer-ball-o"></i><a class="navbar-brand" href="index.html" style="transform: perspective(0px);font-family: Akronim,'Brush Script MT', cursive, serif;font-weight: bold;text-align: left;color: rgb(0,0,0);">UltraFoot</a>&nbsp;</legend>
+                    <div class="table-responsive">
+                        {% for contact in contacts %}
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td><i class="fas fa-map-marker-alt" style="height: 24px;width: 24px;"></i></td>
+                                        <td>{{contact.localisation}}</td>
+                                    </tr>
+                                    <tr></tr>
+                                    <tr>
+                                        <td><i class="fa fa-phone" style="width: 24px;height: 24px;"></i></td>
+                                        <td>{{contact.telephone}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa fa-envelope" style="width: 24px;height: 24px;"></i></td>
+                                        <td>{{contact.email}}<br><br></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        {% endfor %}
+                    </div>
+                </div><!-- End: con -->
+            </div>
+        </div>
+    </div><!-- End: Single Page Contact Us Form -->
+    <!-- Start: Bold BS4 Footer Big Logo -->
+    <footer id="myFooter" style="padding-top: 0;background: linear-gradient(#ba1021 55%, white 100%);">
+        <div class="container-fluid">
+            <div class="row text-center" style="color: rgb(1,1,1);margin-top: 50px;padding-bottom: 30px;">
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12 col-xxl-10 offset-xxl-0 social-networks" style="color: rgb(1, 1, 1);padding: 0px;padding-top: 0px;font-size: 12px;">
+                    <div></div><a class="navbar-brand" href="{{ "tel: +221785202084"}}" style="transform: perspective(0px);font-family: Akronim,'Brush Script MT', cursive, serif;font-weight: bold;text-align: left;color: #ffffff;font-size: 20px;">AmTooLite13</a><a class="google" href="{{"mailto: amadou13.diatta@gmail.com"}}"><i class="fa fa-google-plus" style="font-size: 20px;"></i></a><a class="linkedin" href="{{ "https://www.linkedin.com/in/amadou-diatta-0a26421bb"}}"><i class="fa fa-linkedin" style="font-size: 20px;"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer><!-- End: Bold BS4 Footer Big Logo -->
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/bs-init.js' %}"></script>
+    <script src="{{ 'https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js' }}"></script>
+    <script src="{% static 'assets/js/Lightbox-Gallery.js' %}"></script>
+</body>
+
+</html>
