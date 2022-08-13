@@ -51,8 +51,12 @@
         </section>
         <section style="margin-bottom: 80px;">
             <h1 id="presentation-menu" style="text-align: center;margin-top: 20px;font-family: 'Ceviche One','Brush Script MT', cursive, serif;border-top-style: solid;border-bottom-style: solid;background: linear-gradient(-17deg, #ba1021 0%, white 51%);">Présentation</h1>
-            
-            {% if objectifs %}
+            {% if presentations.len != 0 %}
+                {% for presentation in presentations %}
+                    <p class="text-center" style="padding-right: 20px;padding-left: 20px;font-family: 'Berkshire Swash', serif;font-size: 18px;margin-top: 30px;margin-bottom: 25px;">{{presentation.paragraphe}}<br></p>
+                {% endfor %}
+            {% endif %}
+            {% if objectifs.len != 0 %}
                 <ul class="text-start" style="margin-left: 50px;">
                     {% for objectif in objectifs %}
                         <li style="font-family: 'Berkshire Swash', serif;font-weight: bold;">{{objectif.liste}}</li>
