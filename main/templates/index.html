@@ -51,27 +51,25 @@
         </section>
         <section style="margin-bottom: 80px;">
             <h1 id="presentation-menu" style="text-align: center;margin-top: 20px;font-family: 'Ceviche One','Brush Script MT', cursive, serif;border-top-style: solid;border-bottom-style: solid;background: linear-gradient(-17deg, #ba1021 0%, white 51%);">Présentation</h1>
-            {% if presentations.len != 0 %}
-                {% for presentation in presentations %}
-                    <p class="text-center" style="padding-right: 20px;padding-left: 20px;font-family: 'Berkshire Swash', serif;font-size: 18px;margin-top: 30px;margin-bottom: 25px;">{{presentation.paragraphe}}<br></p>
-                {% endfor %}
-            {% endif %}
-            {% if objectifs.len != 0 %}
+            <!-- {% for presentation in presentations %}
+                <p class="text-center" style="padding-right: 20px;padding-left: 20px;font-family: 'Berkshire Swash', serif;font-size: 18px;margin-top: 30px;margin-bottom: 25px;">{{presentation.paragraphe}}<br></p>
+            {% endfor %}
+            {% if objectifs %}
                 <ul class="text-start" style="margin-left: 50px;">
                     {% for objectif in objectifs %}
                         <li style="font-family: 'Berkshire Swash', serif;font-weight: bold;">{{objectif.liste}}</li>
                     {% endfor %}
                 </ul>
-            {% endif %}
+            {% endif %}-->
         </section>
         <h1 id="photos-menu" style="text-align: center;margin-top: 20px;font-family: 'Ceviche One','Brush Script MT', cursive, serif;border-top-style: solid;border-bottom-style: solid;background: linear-gradient(-17deg, #ba1021, white 51%);">Photos</h1><!-- Start: Lightbox Gallery -->
         <section class="photo-gallery">
             <div class="container">
                 <!-- Start: Photos -->
                 <div class="row photos" data-bss-baguettebox="">
-                    {% for photo in photos %}
+                    <!--{% for photo in photos %}
                         <div class="col-sm-6 col-md-4 col-lg-3 item"><a href={{ photo.image.url }}><img class="img-fluid" src={{ photo.image.url }}></a></div>
-                    {% endfor %}
+                    {% endfor %}-->
             </div>
         </section><!-- End: Lightbox Gallery -->
         <h1 id="team-boxed-menu" style="text-align: center;margin-top: 50px;font-family: 'Ceviche One','Brush Script MT', cursive, serif;border-top-style: solid;border-bottom-style: solid;background: linear-gradient(-17deg, #ba1021, white 51%);margin-bottom: 50px;" >Entraineurs</h1><!-- Start: Team Boxed -->
@@ -79,7 +77,7 @@
             <div class="container" >
                 <!-- Start: People -->
                 <div class="row people">
-                    {% for coach in coaches %}
+                    <!--{% for coach in coaches %}
                         <div class="col-md-6 col-lg-4 item" style="margin: auto";>
                             <div class="box"><img class="rounded-circle" src='{{ coach.image.url  }}'>
                                 <h3 class="name">{{ coach.name }}</h3>
@@ -87,7 +85,7 @@
                                 <div class="social"><a href="{{ coach.facebook }}"><i class="fa fa-facebook-official"></i></a><a href="{{ coach.twitter }}"><i class="fa fa-twitter"></i></a><a href="{{ coach.instagram}}"><i class="fa fa-instagram"></i></a></div>
                             </div>
                         </div>
-                    {% endfor %}
+                    {% endfor %}-->
                 </div><!-- End: People -->
             </div>
         </section><!-- End: Team Boxed -->
@@ -99,7 +97,7 @@
                 <div class="col-md-6" style="padding-left: 20px;padding-right: 20px;background-color: rgb(241,247,252);margin: auto;">
                     <legend><i class="la la-soccer-ball-o"></i><a class="navbar-brand" href="index.html" style="transform: perspective(0px);font-family: Akronim,'Brush Script MT', cursive, serif;font-weight: bold;text-align: left;color: rgb(0,0,0);">UltraFoot</a>&nbsp;</legend>
                     <div class="table-responsive">
-                        {% for contact in contacts %}
+                        <!--{% for contact in contacts %}
                             <table class="table">
                                 <tbody>
                                     <tr>
@@ -117,7 +115,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                        {% endfor %}
+                        {% endfor %}-->
                     </div>
                 </div><!-- End: con -->
             </div>
